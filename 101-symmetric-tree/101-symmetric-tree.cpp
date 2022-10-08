@@ -12,20 +12,19 @@
 class Solution {
 public:
     bool helper(TreeNode* le , TreeNode* ri) {
-        if(!le && !ri){ return true ; }
-        else if((le && !ri)||(!le && ri)) { return false ; }
-        else{
-            if(le->val != ri->val) return false ;
-        bool b1= helper(le->left , ri->right);
+        if(!le && !ri){ return true ; } // le==NULL && ri==NULL 
+        
+        else if(!le || !ri)  return false ;
+        
+        else if(le->val != ri->val) return false ;
+        
+            bool b1= helper(le->left , ri->right);
             bool b2 = helper(le->right, ri->left) ;
-        return b1&&b2 ;
-                
-        }
+            return b1&&b2 ;   
     }
     bool isSymmetric(TreeNode* root) {    
-         if(!root->left && !root->right  )
+         if(!root->left && !root->right)
              return true ;
-        bool b = helper(root->left , root->right) ;
-        return b ;
+        return helper(root->left , root->right) ;
     }
 };
