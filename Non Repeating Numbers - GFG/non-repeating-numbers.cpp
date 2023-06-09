@@ -17,7 +17,7 @@ public:
         } 
         int right_bit  = temp&~(temp-1) ;
         for(int j=0 ; j<nums.size() ;j++) {
-            if(nums[j]&right_bit){
+            if((nums[j]&right_bit)!=0 ){
                 t=t^nums[j] ;
             }
         }
