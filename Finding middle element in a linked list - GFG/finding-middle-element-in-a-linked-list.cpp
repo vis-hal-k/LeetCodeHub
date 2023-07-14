@@ -48,12 +48,8 @@ class Solution{
            temp = temp-> next ;
            c++ ;
        }
- int ith = 0 ;
-       if(c%2)
-       ith = c/2 ; 
-       else 
-       ith = c/2 ;
-       
+ int ith = c/2 ;
+
        int ans = head->data ;
          while(ith--) {
            head=head->next ;
