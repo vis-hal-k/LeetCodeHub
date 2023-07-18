@@ -1,1 +1,81 @@
+1. Which of the following is not bounded by O(n^2)?
+Ans -> C 
+Soln : 
+The order of growth of option (C) is n^2.5 which is higher than n^2.
+Lets look at it with a different approach :
+f(n) = O(n^2) if
+f(n) <= C * n^2 for n > n0.
+Lets look at every option one by one.
+* Option 1 :
+(15^10) * n + 12099
+    Lets say C = 16^10
+        15^10 * n + 12099 < 16^10 * n^2 for n > 1.
+    So, it is O(n^2).
+* Option 2 : n^1.98
+C = 1.
+    n^1.98 < n^2 for n > 1.
+So, its O(n^2) ```
+Option 3 : n^3 / (sqrt(n)) or n^2.5
+    There is no possible combination of C and n0 possible
+Option 4 : 2^20 * n
+    C = 2^20, n0 = 1
+        2^20 * n <= 2^20 * n^2 for n > 1
+```
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. 
+Ans -> A -> Θ(logn)
+The worst case will arise when n and m are consecutive Fibonacci numbers.
+i.e.
+gcd(Fn,Fn−1) = gcd(Fn−1,Fn−2) =⋯ = gcd(F1,F0) = 1
+and nth Fibonacci number is 1.618^n, where 1.618 is the Golden ratio.
+So, to find gcd(n,m), number of recursive calls will be  Θ(logn).
+More detailed explanation : 
+Let us say n = fibonacci(N) and m = fibonacci(N - 1)
+fibonacci(N) = fibonacci(N-1) + fibonacci(N-2)
+OR n = m + k where k and nth Fibonacci number is 1.618n, where 1.618 is the Golden ratio.< m. 
+Therefore the step 
+    n = n % m will make n = k    
+    swap(n, m) will result in
+    n = fibonacci(N-1)
+    m = k = fibonacci(N-2)
+So, it will take N steps before m becomes 0.
+This means, in the worst case, this algorithm can take N step if **n** is Nth fibonacci number. 
+**Think of whats the relation between N and n**. 
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. 
+Ans.
+A -> f3,f3,f4,f1
+Explanation: nLogn is the slowest growing function, then comes n^(3/2), then n^(Logn).  Finally, 2^n is the fastest growing function.
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
