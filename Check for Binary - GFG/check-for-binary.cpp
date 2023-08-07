@@ -29,7 +29,7 @@ bool isBinary(string str)
     // boolean ans = True ;
    int n = str.size() ;
    for(int i = 0 ; i < n  ; i++) {
-   if(str[i] != '1' && str[i] != '0'){
+   if(str[i] != '1' &&  str[i] != '0'){
        return 0 ;
    }
    
