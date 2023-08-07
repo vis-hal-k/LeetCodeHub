@@ -13,15 +13,13 @@ class Solution
             int n = s.size() ;
             string vowel = "" ;
             for (int i = n-1 ; i>= 0  ; i --  ){
-                if(s[i] == 'A' || s[i] == 'a' || s[i] == 'E' || s[i] == 'e' || s[i] == 'i'
-                || s[i] == 'I' || s[i] == 'o' || s[i] == 'O' || s[i] == 'u' || s[i] == 'U') {
+                if(s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u') {
                     vowel += s[i] ;
                 }
             }
             int j = 0 ;
             for(int i = 0 ; i < n ; i++) {
-                if(s[i] == 'A' || s[i] == 'a' || s[i] == 'E' || s[i] == 'e' || s[i] == 'i'
-                || s[i] == 'I' || s[i] == 'o' || s[i] == 'O' || s[i] == 'u' || s[i] == 'U') {
+                if(s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u') {
                     s[i] = vowel[j] ;
                     j++ ;
                 }
