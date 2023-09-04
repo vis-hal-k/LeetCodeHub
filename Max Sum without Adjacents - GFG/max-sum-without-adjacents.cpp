@@ -9,10 +9,10 @@ using namespace std;
 class Solution{
 public:	
 	// calculate the maximum sum with out adjacent
-	int max(int l , int np) {
-	    if(l > np) return l ;
-	    else return np ;
-	} 
+// 	int max(int l , int np) {
+// 	    if(l > np) return l ;
+// 	    else return np ;
+// 	} 
 	int f(int arr[] , int n , vector<int> &dp  ){
 	    if(n==0) {
 	        return arr[n] ;
